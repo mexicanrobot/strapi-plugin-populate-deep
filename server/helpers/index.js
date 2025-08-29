@@ -39,6 +39,7 @@ const getFullPopulateObject = (modelUid, maxDepth = 20, ignore) => {
         const relationPopulate = getFullPopulateObject(
           value.target,
           //(key === 'localizations') && maxDepth > 2 ? 1 : maxDepth - 1,
+          maxDepth - 1,
           ignore
         );
         if (relationPopulate) {
